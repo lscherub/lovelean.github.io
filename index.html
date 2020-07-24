@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <meta http-equiv="content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>/dev/null</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+</head>
+
+<body>
+    <style>
+        @keyframes blinking {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: white;
+            }
+        }
+
+        .cursor {
+            box-sizing: border-box;
+            width: 1em;
+            height1em;
+            display: inline;
+            -webkit-box-sizing: border-box;
+            border-left: .5em solid;
+            -webkit-animation: typing 12s steps(13, end) infinite, blinking 1s step-end infinite;
+            animation: typing 12s steps(13, end) infinite, blinking 1s step-end infinite;
+        }
+
+        .social-media a {
+            display: block;
+            padding: 0.5em 0;
+        }
+
+        p {
+            line-height: 2rem;
+        }
+
+        .parallax-container {
+            min-height: 280px;
+            line-height: 0;
+            height: auto;
+            color: rgba(255, 255, 255, .9);
+        }
+
+        .parallax-container .section {
+            width: 100%;
+        }
+
+        @media only screen and (max-width : 992px) {
+            .parallax-container .section {
+                position: absolute;
+                top: 40%;
+            }
+
+            #index-banner .section {
+                top: 10%;
+            }
+        }
+
+        @media only screen and (max-width : 600px) {
+            #index-banner .section {
+                top: 0;
+            }
+        }
+
+        .icon-block {
+            padding: 0 15px;
+        }
+
+        .icon-block .material-icons {
+            font-size: inherit;
+        }
+
+        html {
+            color: #4a4a4a;
+        }
+
+        .theme-container {
+            min-height: unset;
+            line-height: 0;
+            height: auto;
+            padding: 10px;
+            color: unset;
+        }
+
+        .profile {
+            padding: 0 20px;
+        }
+    </style>
+    <div class="parallax-container theme-container">
+        <div>
+            <div class="container">
+                <div class="row card-panel">
+                    <div class="col s12 m4 l3 center"><img class="responsive-img profile circle" src="p.jpg" /></div>
+                    <div class="col s12 m8 l9">
+                        <h2 class="blue-grey-text center">01101000 01101001</h2>
+                        <h3 class=" center">I'm <strong>Jean</strong></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="parallax"><img src="b.jpg" /></div>
+    </div>
+    <div class="container">
+        <div class="section">
+            <div class="row center">
+                <h4 class="light"><b>~ root$</b> cat aboutMe.txt</h4>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="icon-block center"><br />
+                        <h2 class="center blue-grey-text "><i class="material-icons">settings</i></h2>
+                        <h5>{"graduation":{</h5>
+                        <p class="light"><b>"B.el"</b> : "Computer Science",<br /><b>"Esp."</b> : "IT
+                            governance",<br /><b>"MBA"</b> : "BPM - Business Process Management",<br /><b>"MBE"</b> :
+                            "Leadership and Organizational Management"<br /></ul>
+                        </p>
+                        <h5>}}</h5>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="icon-block center">
+                        <h2 class="center blue-grey-text"><i class="material-icons">flash_on</i></h2>
+                        <h5>{"skills":[</h5>
+                        <p class="light">"Scrum", "Kanban", "Agile", "XP", "Html", "Javascript", "CSS", "Jquery",
+                            "Bootstrap", "PHP", "Java", "JSP", "JSF", "JEE", "Primefaces", "Maven", "Spring",
+                            "Hibernate", "PL/SQL", "Webservice", "SOA", "WSDL", "REST", "Webcenter", "ETL", "ODI",
+                            "Unix", "Apache", "Weblogic 11g/12c", "Glassfish", "Mysql", "Oracle 11g/12c", "Itil",
+                            "Cobit", "BPMN"</p>
+                        <h5>]}</h5>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="icon-block center	"><br />
+                        <h2 class="center blue-grey-text"><i class="material-icons">child_care</i></h2>
+                        <h5>{"interests":[</h5>
+                        <p class="light">"web", "java", "python", "php", "security", "algorithms", "raspberry", "IOT",
+                            "machine_learn", "improve processes", "hacks", "automation", "linux", "graphic computing",
+                            "data science", "data base", "big data", "systems architecture"</p>
+                        <h5>]}</h5>
+                    </div>
+                </div>
+            </div>
+            <hr /><br />
+            <div class="row center social-media">
+                <div class="col s12 m4"><a title="LinkedIn" target="_blank"
+                        href="https://www.linkedin.com/in/jeanfmc/">4c696e6b6564496e</a></div>
+                <div class="col s12 m4"><a title="Twitter" target="_blank"
+                        href="https://twitter.com/jean_fmc">54776974746572</a></div>
+                <div class="col s12 m4"><a title="WordPress" target="_blank"
+                        href="https://martinsjean256.wordpress.com">576f72645072657373</a></div>
+                <div class="col s12 m4"><a title="GitHub" target="_blank"
+                        href="https://github.com/jeanfmc">476974487562</a></div>
+                <div class="col s12 m4"><a title="YouTube" target="_blank"
+                        href="https://www.youtube.com/channel/UCRY_4PKasoFckxj8DTqpy4w">596f7554756265</a></div>
+                <div class="col s12 m4"><a title="Medium" target="_blank"
+                        href="https://medium.com/@jeanfelipemartinsdacosta">4d656469756d</a></div>
+                <div class="col s12 m4"><a title="HackerRank" target="_blank"
+                        href="https://www.hackerrank.com/jean_fmc">4861636b657252616e6b</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-container valign-wrapper">
+        <div>
+            <div class="container">
+                <div class="row  white-text">
+                    <h5 class="light"> <b>~ root$</b> pwd<br />/br/rs/poa</h5>
+                    <h5 class="light"> <b>~ root$</b> mail -s "hi" <a
+                            href="mailto:jeanfelipemartinsdacosta@gmail.com?subject=hi" class=" white-text"
+                            style="text-decoration:underline;">jeanfelipemartinsdacosta@gmail.com</a></h5>
+                    <h5 class="light"><b>~ root$ </b>
+                        <div class="cursor"></div>
+                    </h5>
+                </div>
+            </div>
+            <div class="parallax"><img src="b.jpg" /></div>
+        </div>
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        <script>(function ($) { $(function () { $('.parallax').parallax(); }); })(jQuery);</script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118375909-1"></script>
+        <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-118375909-1');</script>
+</body>
+
+</html>
