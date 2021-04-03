@@ -208,6 +208,116 @@
                 top: 110%;
             }
         }
+
+        .lines2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            margin: auto;
+            width: 60vw;
+            transform: rotate(180deg);
+        }
+        
+        .line2 {
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            top: 0;
+            left: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+        
+        .line2::after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 15vh;
+            width: 100%;
+            top: -50%;
+            left: 0;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+            -webkit-animation: drop 7s 0s infinite;
+            animation: drop 7s 0s infinite;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+            -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+            animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+        }
+        
+        .line2:nth-child(1) {
+            margin-left: -25%;
+        }
+        
+        .line2:nth-child(1)::after {
+            -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+        }
+        
+        .line2:nth-child(3) {
+            margin-left: 25%;
+        }
+        
+        .line2:nth-child(3)::after {
+            -webkit-animation-delay: 2.5s;
+            animation-delay: 2.5s;
+        }
+        
+        .line2:nth-child(4){
+            margin-left: -50%;
+        }
+
+        .line2:nth-child(4)::after{
+            -webkit-animation-delay: 3.0s;
+            animation-delay: 3.0s;
+        }
+
+        .line2:nth-child(5){
+            margin-left: 50%;
+        }
+
+        .line2:nth-child(5)::after{
+            -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+        }
+
+        .line2:nth-child(6){
+            margin-left: -75%;
+        }
+
+        .line2:nth-child(6)::after{
+            -webkit-animation-delay: 2.5s;
+            animation-delay: 2.5s;
+        }
+
+        .line2:nth-child(7){
+            margin-left: 75%;
+        }
+
+        .line2:nth-child(7)::after{
+            -webkit-animation-delay: 3.0s;
+            animation-delay: 3.0s;
+        }
+
+        @-webkit-keyframes drop {
+            0% {
+                top: -50%;
+            }
+            100% {
+                top: 110%;
+            }
+        }
+        
+        @keyframes drop {
+            0% {
+                top: -50%;
+            }
+            100% {
+                top: 110%;
+            }
+        }
     </style>
     <div class="parallax-container theme-container">
         <div>
@@ -215,7 +325,7 @@
                 <div class="row card-panel">
                     <div class="col s12 m4 l3 center"><img class="responsive-img profile circle" src="/Images/Me.jpg" /></div>
                     <div class="col s15 m8 l9">
-                        <h3 style="float: unset;"><strong>Hi, I'm Loveleen Singh<i>!</i></strong></h3>
+                        <h3 style="float: unset; "><strong>Hi, I'm Loveleen Singh<i>!</i></strong></h3>
                         </h7>
                     </div>
                 </div>
@@ -269,19 +379,12 @@
             </div>
         </div>
         <hr /><br />
-        <div class="row center social-media">
-            <div class="col s12 m4"><a title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/singh-loveleen/">LinkedIn</a></div>
-            <div class="col s12 m4"><a title="Twitter" target="_blank" href="">Twitter</a></div>
-            <div class="col s12 m4"><a title="GitHub" target="_blank" href="https://github.com/lscherub">Github</a></div>
-            <div class="col s12 m4"><a title="YouTube" target="_blank" href="https://www.youtube.com/channel/UCpgdqrsdUmsG8UnhgRJ01ww?view_as=public">Youtube</a></div>
-            <div class="col s12 m4"><a title="Medium" target="_blank" href="">Medium</a></div>
-        </div>
     </div>
     </div>
-    <div class="parallax-container valign-wrapper">
+    <div class="parallax-container valign-wrapper" style="background-color: #222323;">
         <div>
-            <div class="container">
-                <div class="row  white-text">
+            <div class="container" >
+                <div class="row  white-text" >
                     <h5 class="light"> <b>~ root$</b> pwd<br />/br/rs/poa</h5>
                     <h5 class="light"> <b>~ root$</b> mail -s "hi" <a href="mailto:cherub1612@gmail.com?subject=hi" class=" white-text" style="text-decoration:underline;">cherub1612@gmail.com</a></h5>
                     <h5 class="light"><b>~ root$ </b>
@@ -289,8 +392,26 @@
                     </h5>
                 </div>
             </div>
-            <div class="parallax"><img src="Images/b.jpg" /></div>
         </div>
+        <div class="container" style="float: right;">
+            <div class="row center social-media">
+                <div class="col s12 m4"><a title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/singh-loveleen/">LinkedIn</a></div>
+                <div class="col s12 m4"><a title="Twitter" target="_blank" href="">Twitter</a></div>
+                <div class="col s12 m4"><a title="GitHub" target="_blank" href="https://github.com/lscherub">Github</a></div>
+                <div class="col s12 m4"><a title="YouTube" target="_blank" href="https://www.youtube.com/channel/UCpgdqrsdUmsG8UnhgRJ01ww?view_as=public">Youtube</a></div>
+                <div class="col s12 m4"><a title="Medium" target="_blank" href="">Medium</a></div>
+            </div>
+        </div>
+        <div class="lines2">
+            <div class="line2"></div>
+            <div class="line2"></div>
+            <div class="line2"></div>
+            <div class="line2"></div>
+            <div class="line2"></div>
+            <div class="line2"></div>
+            <div class="line2"></div>
+        </div>
+    </div>
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
         <script>
