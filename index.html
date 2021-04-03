@@ -2,31 +2,33 @@
 <html lang="en">
 
 <head>
-    <link rel="shortcut icon" href="Images/Letter16.ico" type="image/ico" sizes="16x16">  
-	<link rel="shortcut icon" href="Images/Letter32.ico" type="image/ico" sizes="32x32">  
-	<link rel="shortcut icon" href="Images/Letter96.ico" type="image/ico" sizes="96x96">
+    <link rel="shortcut icon" href="Images/Letter16.ico" type="image/ico" sizes="16x16">
+    <link rel="shortcut icon" href="Images/Letter32.ico" type="image/ico" sizes="32x32">
+    <link rel="shortcut icon" href="Images/Letter96.ico" type="image/ico" sizes="96x96">
     <meta http-equiv="content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Loveleen</title>
+    <title>Loveleen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link href="style.css" rel="stylesheet" type="text/css">
+    <!-- <link rel="stylesheet" href="style/debug.css"> -->
 </head>
 
 <body>
     <style>
         @keyframes blinking {
-
             from,
             to {
                 border-color: transparent;
             }
-
             50% {
                 border-color: antiquewhite;
             }
         }
-
+        
         .cursor {
             box-sizing: border-box;
             width: 1em;
@@ -37,56 +39,55 @@
             -webkit-animation: typing 12s steps(13, end) infinite, blinking 1s step-end infinite;
             animation: typing 12s steps(13, end) infinite, blinking 1s step-end infinite;
         }
-
+        
         .social-media a {
             display: block;
             padding: 0.5em 0;
         }
-
+        
         p {
             line-height: 2rem;
         }
-
+        
         .parallax-container {
             min-height: 280px;
             line-height: 0;
             height: auto;
             color: rgba(255, 255, 255, .9);
         }
-
+        
         .parallax-container .section {
             width: 100%;
         }
-
-        @media only screen and (max-width : 992px) {
+        
+        @media only screen and (max-width: 992px) {
             .parallax-container .section {
                 position: centre;
                 top: 40%;
             }
-
             #index-banner .section {
                 top: 10%;
             }
         }
-
-        @media only screen and (max-width : 600px) {
+        
+        @media only screen and (max-width: 600px) {
             #index-banner .section {
                 top: 0;
             }
         }
-
+        
         .icon-block {
             padding: 0 15px;
         }
-
+        
         .icon-block .material-icons {
             font-size: inherit;
         }
-
+        
         html {
             color: #4a4a4a;
         }
-
+        
         .theme-container {
             min-height: unset;
             line-height: 0;
@@ -94,9 +95,118 @@
             padding: 10px;
             color: unset;
         }
-
+        
         .profile {
             padding: 0 20px;
+        }
+        
+        .lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            margin: auto;
+            width: 60vw;
+        }
+        
+        .line {
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            top: 0;
+            left: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+        
+        .line::after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 15vh;
+            width: 100%;
+            top: -50%;
+            left: 0;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+            -webkit-animation: drop 7s 0s infinite;
+            animation: drop 7s 0s infinite;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+            -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+            animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+        }
+        
+        .line:nth-child(1) {
+            margin-left: -25%;
+        }
+        
+        .line:nth-child(1)::after {
+            -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+        }
+        
+        .line:nth-child(3) {
+            margin-left: 25%;
+        }
+        
+        .line:nth-child(3)::after {
+            -webkit-animation-delay: 2.5s;
+            animation-delay: 2.5s;
+        }
+        
+        .line:nth-child(4){
+            margin-left: -50%;
+        }
+
+        .line:nth-child(4)::after{
+            -webkit-animation-delay: 3.0s;
+            animation-delay: 3.0s;
+        }
+
+        .line:nth-child(5){
+            margin-left: 50%;
+        }
+
+        .line:nth-child(5)::after{
+            -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+        }
+
+        .line:nth-child(6){
+            margin-left: -75%;
+        }
+
+        .line:nth-child(6)::after{
+            -webkit-animation-delay: 2.5s;
+            animation-delay: 2.5s;
+        }
+
+        .line:nth-child(7){
+            margin-left: 75%;
+        }
+
+        .line:nth-child(7)::after{
+            -webkit-animation-delay: 3.0s;
+            animation-delay: 3.0s;
+        }
+
+        @-webkit-keyframes drop {
+            0% {
+                top: -50%;
+            }
+            100% {
+                top: 110%;
+            }
+        }
+        
+        @keyframes drop {
+            0% {
+                top: -50%;
+            }
+            100% {
+                top: 110%;
+            }
         }
     </style>
     <div class="parallax-container theme-container">
@@ -106,80 +216,75 @@
                     <div class="col s12 m4 l3 center"><img class="responsive-img profile circle" src="/Images/Me.jpg" /></div>
                     <div class="col s15 m8 l9">
                         <h3 style="float: unset;"><strong>Hi, I'm Loveleen Singh<i>!</i></strong></h3>
-						<h7 style="float: unset;">I'm working on a new portoflio, meanwhile you can contact me at: <a title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/singh-loveleen/">LinkedIn<div class="cursor"></div></a>	
-						</h7>
+                        <h7 style="float: unset;">I'm working on a new portoflio, meanwhile you can contact me at: <a title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/singh-loveleen/">LinkedIn<div class="cursor"></div></a>
+                        </h7>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="parallax"><img src="Images/banner.png" /></div>
+        <div class="parallax" style="background-color: #222323;">
+            <div class="lines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
     </div>
     <div class="container">
-        <div class="section"><hr />
+        <div class="section">
+            <hr />
             <div class="row center">
                 <h4 class="light"><b> About me</b></h4>
             </div>
             <hr />
-                <div class="col s12 m4">
-                    <div class="icon-block center"><br />
-                        <h2 class="center blue-grey-text "><i class="material-icons">settings</i></h2>
-                        <h5>{"education":{</h5>
-                        <p class="light"><b>"Diploma"</b> : "Computer Information Systems",<br /><b>"KPU"</b> : "IT
-                            governance",<br /><b>"MBA"</b> : "BPM - Business Process Management",<br /><b>"MBE"</b> :
-                            "Leadership and Organizational Management"<br /></ul>
-                        </p>
-                        <h5>}}</h5>
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="icon-block center">
-                        <h2 class="center blue-grey-text"><i class="material-icons">flash_on</i></h2>
-                        <h5>{"skills":[</h5>
-                        <p class="light">"C++", "Linux", "Pentesting", "Html", "CSS", 
-                            "Java", "Python", 
-                            "Unix", "Mysql", "Spanish"
-                            </p>
-                        <h5>]}</h5>
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="icon-block center	"><br />
-                        <h2 class="center blue-grey-text"><i class="material-icons">child_care</i></h2>
-                        <h5>{"interests":[</h5>
-                        <p class="light">"web", "security", "algorithms", "raspberryPi", "IOT",
-                            "machine_learn", "improve processes", "hacks", "automation", "linux",
-                            "data science", "data base", "systems architecture", "languages"</p>
-                        <h5>]}</h5>
-                    </div>
+            <div class="col s12 m4">
+                <div class="icon-block center"><br />
+                    <h2 class="center blue-grey-text "><i class="material-icons">settings</i></h2>
+                    <h5>{"education":{</h5>
+                    <p class="light"><b>"Diploma"</b> : "Computer Information Systems",<br /><b>"KPU"</b> : "IT governance",
+                        <br /><b>"MBA"</b> : "BPM - Business Process Management",<br /><b>"MBE"</b> : "Leadership and Organizational Management"<br /></ul>
+                    </p>
+                    <h5>}}</h5>
                 </div>
             </div>
-            <hr /><br />
-            <div class="row center social-media">
-                <div class="col s12 m4"><a title="LinkedIn" target="_blank"
-                        href="https://www.linkedin.com/in/singh-loveleen/">4c696e6b6564496e</a></div>
-                <div class="col s12 m4"><a title="Twitter" target="_blank"
-                        href="">54776974746572</a></div>
-                <div class="col s12 m4"><a title="WordPress" target="_blank"
-                        href="">576f72645072657373</a></div>
-                <div class="col s12 m4"><a title="GitHub" target="_blank"
-                        href="https://github.com/lscherub">476974487562</a></div>
-                <div class="col s12 m4"><a title="YouTube" target="_blank"
-                        href="https://www.youtube.com/channel/UCpgdqrsdUmsG8UnhgRJ01ww?view_as=public">596f7554756265</a></div>
-                <div class="col s12 m4"><a title="Medium" target="_blank"
-                        href="">4d656469756d</a></div>
-                <div class="col s12 m4"><a title="HackerRank" target="_blank"
-                        href="">4861636b657252616e6b</a></div>
+            <div class="col s12 m4">
+                <div class="icon-block center">
+                    <h2 class="center blue-grey-text"><i class="material-icons">flash_on</i></h2>
+                    <h5>{"skills":[</h5>
+                    <p class="light">"C++", "Linux", "Pentesting", "Html", "CSS", "Java", "Python", "Unix", "Mysql", "Spanish"
+                    </p>
+                    <h5>]}</h5>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="icon-block center	"><br />
+                    <h2 class="center blue-grey-text"><i class="material-icons">child_care</i></h2>
+                    <h5>{"interests":[</h5>
+                    <p class="light">"web", "security", "algorithms", "raspberryPi", "IOT", "machine_learn", "improve processes", "hacks", "automation", "linux", "data science", "data base", "systems architecture", "languages"</p>
+                    <h5>]}</h5>
+                </div>
             </div>
         </div>
+        <hr /><br />
+        <div class="row center social-media">
+            <div class="col s12 m4"><a title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/singh-loveleen/">LinkedIn</a></div>
+            <div class="col s12 m4"><a title="Twitter" target="_blank" href="">Twitter</a></div>
+            <div class="col s12 m4"><a title="GitHub" target="_blank" href="https://github.com/lscherub">Github</a></div>
+            <div class="col s12 m4"><a title="YouTube" target="_blank" href="https://www.youtube.com/channel/UCpgdqrsdUmsG8UnhgRJ01ww?view_as=public">Youtube</a></div>
+            <div class="col s12 m4"><a title="Medium" target="_blank" href="">Medium</a></div>
+        </div>
+    </div>
     </div>
     <div class="parallax-container valign-wrapper">
         <div>
             <div class="container">
                 <div class="row  white-text">
                     <h5 class="light"> <b>~ root$</b> pwd<br />/br/rs/poa</h5>
-                    <h5 class="light"> <b>~ root$</b> mail -s "hi" <a
-                            href="mailto:cherub1612@gmail.com?subject=hi" class=" white-text"
-                            style="text-decoration:underline;">cherub1612@gmail.com</a></h5>
+                    <h5 class="light"> <b>~ root$</b> mail -s "hi" <a href="mailto:cherub1612@gmail.com?subject=hi" class=" white-text" style="text-decoration:underline;">cherub1612@gmail.com</a></h5>
                     <h5 class="light"><b>~ root$ </b>
                         <div class="cursor"></div>
                     </h5>
@@ -189,9 +294,23 @@
         </div>
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-        <script>(function ($) { $(function () { $('.parallax').parallax(); }); })(jQuery);</script>
+        <script>
+            (function($) {
+                $(function() {
+                    $('.parallax').parallax();
+                });
+            })(jQuery);
+        </script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118375909-1"></script>
-        <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-118375909-1');</script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-118375909-1');
+        </script>
 </body>
 
 </html>
